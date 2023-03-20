@@ -1,0 +1,169 @@
+*{
+    padding: 10;
+    margin: 10;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    color: #970f0f;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3{
+    color: aqua;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h6{
+    color: blue;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+p{
+    color: grey;
+    font-size: .95rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+section{
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.container{
+    width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.col-33{
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+
+.col-25{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.col-50{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+i{
+    font-size: 2rem;
+    color: yellow;
+}
+
+.btn{
+    padding: 10px 25px;
+    background-color: goldenrod;
+    border: 0px;
+    border-radius: 25px;
+    font-size: .95rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+header{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    overflow: hidden;
+}
+
+.company{
+    padding-left: 35px;
+    float: left;
+}
+
+.company img{
+    float: left;
+    display: block;
+}
+
+.company h2{
+    float: left;
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+#main-menu{
+    padding-right: 35px;
+    float: right;
+    margin-top: auto;
+}
+
+#main-menu ul{
+    list-style: none;
+}
+
+#main-menu ul li{
+    float: left;
+    margin: auto;
+}
+
+#main-menu ul li a{
+    padding: 10px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: red;
+    font-size: .95rem;
+}
+
+#main-menu ul li a:hover{
+    background-color: aliceblue;
+    color: goldenrod;
+}
+
+.active a{
+    background-color: aliceblue;
+    color: goldenrod !important;
+}
+#home{
+    background-image: url(../banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#services{
+    background-image: url(../banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#review{
+    background-image: url(../banner3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contact{
+    background-image: url(../banner4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project img{
+    height: 250px;
+    width: 100%;
+}
