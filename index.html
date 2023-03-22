@@ -36,27 +36,31 @@
     <main>
         <section id="home">
             <div class="container">
-                <div class="col-50" style="text-align:left; margin-top:200px;">
+                <div class="col-50 author_text">
 
-                    <p style="font-size:1.5rem; text-transform:uppercase;">
-                        <mark style="color:black;">Introduction</mark>
-                    </p>
+                    <div class="content">
+                        <p>
+                            <mark style="color:black;">Introduction</mark>
+                        </p>
 
-                    <p style="color: grey; font-size:1.75rem; 
-                    text-transform:uppercase;">Hello, My name is MD. Jabed Hossain
-                    </p>
+                        <h6>Hello, My name is MD. Jabed Hossain</h6>
 
-                    <h2 style="font-size:2.5rem; text-transform:uppercase; 
-                    margin-bottom:20px;"> <mark>I am a programmer</mark>
-                    </h2>
+                        <h2> <mark>I am a programmer</mark></h2>
 
-                    <button class="btn" style="background-color: white; color: goldenrod">Hire Me</button>
-                    <button class="btn">My work</button>
+                        <button class="btn" style="background-color: white; color: goldenrod">Hire Me</button>
+                        <button class="btn">My work</button>
+                    </div>
+
+
                 </div>
                 <div class="col-50">
-                    <img src="1.jpg" width="auto" height="300" alt="my photo">
+                    <div class="content">
+                        <img src="1.jpg" alt="my photo">
+                    </div>
                 </div>
+
             </div>
+
         </section>
 
         <section id="about">
@@ -269,26 +273,38 @@
         <section id="review">
             <div class="container">
                 <div class="col-25">
-                    <i class="fa-regular fa-lightbulb"></i>
-                    <h3>48</h3>
-                    <h5>Projects Done</h5>
+                    <div class="content">
+                        <i class="fa-regular fa-lightbulb"></i>
+                        <h3>48</h3>
+                        <h5>Projects Done</h5>
+                    </div>
                 </div>
+
                 <div class="col-25">
-                    <i class="fa-regular fa-heart"></i>
-                    <h3>42</h3>
-                    <h5>Satisfied Clients</h5>
+                    <div class="content">
+                        <i class="fa-regular fa-heart"></i>
+                        <h3>42</h3>
+                        <h5>Satisfied Clients</h5>
+                    </div>
                 </div>
+
                 <div class="col-25">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    <h3>10</h3>
-                    <h5>Awards</h5>
+                    <div class="content">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <h3>10</h3>
+                        <h5>Awards</h5>
+                    </div>
                 </div>
+
                 <div class="col-25">
-                    <i class="fa-regular fa-face-grin-hearts"></i>
-                    <h3>70</h3>
-                    <h5>Happy Clients</h5>
+                    <div class="content">
+                        <i class="fa-regular fa-face-grin-hearts"></i>
+                        <h3>70</h3>
+                        <h5>Happy Clients</h5>
+                    </div>
                 </div>
             </div>
+
         </section>
 
         <section id="contact">
@@ -297,50 +313,75 @@
                 <h1>Contact Me Now</h1>
                 <form>
                     <div class="col-50">
-                        <input type="text" id="name" name="name" placeholder="Enter your name here" required>
-                        <input type="email" id="email" name="email" value="user@gmail.com"
-                            placeholder="Enter your email here" required>
-                        <input type="number" id="phone" name="phone" placeholder="Enter your number here" required>
-                    </div><br>
-                    <div class="col-50">
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message">
-                    </textarea>
+                        <div class="content">
+                            <input type="text" id="name" name="name" placeholder="Enter your name here" required>
+                            <input type="email" id="email" name="email" placeholder="Enter your email here" required>
+                            <input type="number" id="phone" name="phone" placeholder="Enter your number here" required>
+                        </div>
                     </div>
-                    <button class="btn" type="submit" style="border-radius: 10px; 
-                    padding: 15px 35px;">Submit</button>
+                    <br>
+
+                    <div class="col-50">
+                        <div class="content">
+                            <textarea name="message" id="message" cols="20" rows="10"
+                                placeholder="Enter your message here">
+                        </textarea>
+                        </div>
+
+                    </div>
+
+                    <button class="btn" type="submit">Submit</button>
                 </form>
 
-                <div>
+                <div id="address">
                     <div class="col-33">
-                        <i class="fa-regular fa-map"></i>
-                        <p>Address <br> Daffodil Smart City, Dhaka-1216</p>
+                        <div class="content">
+                            <i class="fa-regular fa-map"></i>
+                            <p>Address <br> Daffodil Smart City, Dhaka-1216</p>
+                        </div>
+
                     </div>
+
                     <div class="col-33">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>Email <br> jabed@gmail.com</p>
+                        <div class="content">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>Email <br> jabed@gmail.com</p>
+                        </div>
+
                     </div>
+
                     <div class="col-33">
-                        <i class="fa-solid fa-phone"></i>
-                        <p>Phone <br> 01305009069</p>
+                        <div class="content">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>Phone <br> 01305009069</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
+
         </section>
-        <hr>
 
     </main>
-    <footer>
-        <div>
-            &copy; 2023 all rights reserved by Jabed Hossain
+    <footer> <br>
+        <div class="content">
+            <div id="copy-right">
+                &copy; 2023 all rights reserved by Jabed Hossain
+            </div>
+
+            <nav id="social">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-            </ul>
-        </nav>
+
+        <div id="upper">
+            <i class="fa-solid fa-person-arrow-up-from-line"></i>
+        </div>
     </footer>
 </body>
 

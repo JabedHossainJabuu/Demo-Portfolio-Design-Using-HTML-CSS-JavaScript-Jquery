@@ -67,7 +67,7 @@ section {
     text-align: center;
 }
 
-.content{
+.content {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 5px;
@@ -156,11 +156,37 @@ header {
     padding-bottom: 0px;
 }
 
-#home p {
+#home .author_text {
     text-align: left;
+    margin-top: 200px;
 }
 
-#progress .col-33{
+#home p {
+    text-align: left;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#home h6 {
+    text-align: left;
+    color: rgb(128, 128, 128);
+    font-size: 1.75rem;
+    text-transform: uppercase;
+}
+
+#home h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#home img {
+    width: auto;
+    height: 300px;
+    float: right;
+}
+
+#progress .col-33 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -171,7 +197,7 @@ header {
     color: rgb(151, 15, 15);
 }
 
-.progressbar{
+.progressbar {
     height: 10px;
     width: 100%;
     background-color: #e9e3e3;
@@ -179,7 +205,7 @@ header {
     margin: 10px auto;
 }
 
-.progress-achieve{
+.progress-achieve {
     height: 10px;
     width: 100%;
     background-color: yellow;
@@ -193,17 +219,17 @@ header {
     background-size: cover;
 }
 
-#services .content{
+#services .content {
     background-color: rgba(255, 255, 255, 0.616);
     border-radius: 5px;
     padding: 55px;
 }
 
-#services .content:hover{
+#services .content:hover {
     background-color: #2196f3;
 }
 
-#services h3{
+#services h3 {
     margin-top: 25px;
     margin-bottom: 25px;
     color: black;
@@ -212,26 +238,26 @@ header {
 
 #services p {
     font-size: .9rem;
-    color:#ffffff;
+    color: #ffffff;
 }
 
-#projects .content{
+#projects .content {
     position: relative;
 }
 
-#projects .overlay{
+#projects .overlay {
     position: absolute;
     bottom: 10px;
     background-color: #4f1a81;
     left: 22px;
     right: 21px;
     padding: 15px;
-    color:whitesmoke;
+    color: whitesmoke;
     text-transform: uppercase;
     display: none;
 }
 
-#projects .content:hover .overlay{
+#projects .content:hover .overlay {
     display: block;
 }
 
@@ -241,13 +267,184 @@ header {
     background-size: cover;
 }
 
+#review h3 {
+    font-size: 2rem;
+    color: whitesmoke;
+    margin: 25px auto 30px;
+}
+
+#review h5 {
+    font-size: 1rem;
+    color: white;
+    margin: 25px auto 35px;
+}
+
 #contact {
     background-image: url(../banner4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#project img {
-    height: 250px;
+#contact h1 {
+    color: white;
+    margin-bottom: 35px;
+}
+
+#contact form input,
+#contact form textarea {
     width: 100%;
+    background-color: #302c2c;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: -30px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#contact textarea {
+    height: 150px;
+}
+
+#contact button {
+    border-radius: 10px;
+    padding: 15px 35px;
+    background-color: #216fe2;
+}
+
+#address {
+    margin: 50px auto 25px;
+}
+
+#address p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+
+footer {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    padding: 25px 0;
+}
+
+#copy-right {
+    float: left;
+    color: rgb(128, 128, 128);
+    ;
+}
+
+#social {
+    float: right;
+    padding: 0px;
+}
+
+#social ul {
+    list-style-type: none;
+}
+
+#social ul li {
+    float: left;
+    margin: auto 15px;
+    height: 20px;
+    width: 25px;
+    border: 2px solid rgb(128, 128, 128);
+    ;
+    border-radius: 50%;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#social ul li:last-child {
+    margin-right: 0px;
+}
+
+#social ul li a i {
+    font-size: .8rem;
+    color: rgb(128, 128, 128);
+}
+
+#upper {
+    padding-top: 10px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background-color: rgb(128, 128, 128);
+    height: 30px;
+    width: 40px;
+    text-align: center;
+}
+
+#upper i {
+    font-size: 1rem;
+    color: white;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .col-25,
+    .col-33,
+    .col-50 {
+        width: 100%;
+    }
+
+    #main-menu ul li {
+        float: none;
+    }
+
+    #home .col-50 {
+        width: 50%;
+    }
+
+    #home img {
+        height: 150px;
+    }
+
+    #home .author_text {
+        margin-top: 50px;
+    }
+
+    #home p {
+        font-size: .75rem;
+    }
+
+    #home h6 {
+        font-size: .9rem;
+    }
+
+    #home h2 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    #home .btn {
+        font-size: .75rem;
+        padding: 7px 15px;
+    }
+
+    #review .col-25 {
+        width: 50%;
+    }
+
+    #review .content {
+        margin-top: 30px;
+    }
+
+    #copy-right,
+    #social {
+        float: none;
+        text-align: center;
+    }
+
+    #social ul {
+        margin-left: 25%;
+    }
+
 }
