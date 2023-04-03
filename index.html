@@ -6,17 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Portfolio</title>
+
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Portfolio</title>
+    <style>
+        [id*="-error"] {
+            color: yellow;
+            text-align: left;
+            float: left;
+            margin-top: -10px;
+        }
+    </style>
+
 </head>
 
 <body>
+
     <header id="main-menue">
 
         <div class="company">
-            <img src="logo.png" width="auto" height="50px" alt="company logo">
+            <img src="images/logo.png" width="auto" height="50px" alt="company logo">
             <h2>Jabed</h2>
 
             <nav id="main-menu">
@@ -55,7 +66,7 @@
                 </div>
                 <div class="col-50">
                     <div class="content">
-                        <img src="1.jpg" alt="my photo">
+                        <img src="images/1.jpg" alt="my photo">
                     </div>
                 </div>
 
@@ -214,7 +225,7 @@
 
                 <div class="col-33">
                     <div class="content">
-                        <img src="project1.png" width="300" height="300" alt="project1">
+                        <img src="images/project1.png" width="300" height="300" alt="project1">
                         <div class="overlay">
                             <a>View</a>
                         </div>
@@ -223,7 +234,7 @@
 
                 <div class="col-33">
                     <div class="content">
-                        <img src="project2.png" width="300" height="300" alt="project2">
+                        <img src="images/project2.png" width="300" height="300" alt="project2">
                         <div class="overlay">
                             <a>View</a>
                         </div>
@@ -232,7 +243,7 @@
 
                 <div class="col-33">
                     <div class="content">
-                        <img src="project3.jpg" width="300" height="300" alt="project2">
+                        <img src="images/project3.jpg" width="300" height="300" alt="project2">
                         <div class="overlay">
                             <a>View</a>
                         </div>
@@ -241,7 +252,7 @@
 
                 <div class="col-33">
                     <div class="content">
-                        <img src="project4.png" width="300" height="300" alt="project2">
+                        <img src="images/project4.png" width="300" height="300" alt="project2">
                         <div class="overlay">
                             <a>View</a>
                         </div>
@@ -250,7 +261,7 @@
 
                 <div class="col-33">
                     <div class="content">
-                        <img src="project5.jpg" width="300" height="300" alt="project2">
+                        <img src="images/project5.jpg" width="300" height="300" alt="project2">
                         <div class="overlay">
                             <a>View</a>
                         </div>
@@ -259,7 +270,7 @@
 
                 <div class="col-33">
                     <div class="content">
-                        <img src="project6.jpg" width="300" height="300" alt="project2">
+                        <img src="images/project6.jpg" width="300" height="300" alt="project2">
                         <div class="overlay">
                             <a>View</a>
                         </div>
@@ -311,12 +322,25 @@
             <div class="container">
                 <h6>Find Me</h6>
                 <h1>Contact Me Now</h1>
-                <form>
+
+                <form name="contactForm" onsubmit="if(confirm('Do tou want to send this message?'))
+                {if(myValidation() == false) {return false;} }
+                else{event.preventDefault(); return false;}">
+
                     <div class="col-50">
                         <div class="content">
-                            <input type="text" id="name" name="name" placeholder="Enter your name here" required>
-                            <input type="email" id="email" name="email" placeholder="Enter your email here" required>
-                            <input type="number" id="phone" name="phone" placeholder="Enter your number here" required>
+                            <input type="text" id="name" name="name" placeholder="Enter your name here"
+                                onfocus="myFocus(this)">
+                            <span id="name-error"></span>
+
+                            <input type="email" id="email" name="email" placeholder="Enter your email here"
+                                onfocus="myFocus(this)">
+                            <span id="email-error"></span>
+
+                            <input type="number" id="phone" name="phone" placeholder="Enter your number here"
+                                onfocus="myFocus(this)">
+                            <span id="phone-error"></span>
+
                         </div>
                     </div>
                     <br>
@@ -324,13 +348,19 @@
                     <div class="col-50">
                         <div class="content">
                             <textarea name="message" id="message" cols="20" rows="10"
-                                placeholder="Enter your message here">
+                                placeholder="Enter your message here" onfocus="myFocus(this)">
+
+                                <span id="message-error"></span>
+
                         </textarea>
                         </div>
 
                     </div>
 
-                    <button class="btn" type="submit">Submit</button>
+                    <div style="width: 100%; clear:both;">
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+
                 </form>
 
                 <div id="address">
@@ -383,6 +413,53 @@
             <i class="fa-solid fa-person-arrow-up-from-line"></i>
         </div>
     </footer>
-</body>
 
-</html>
+
+    <script>
+        function myValidation(x) {
+            var name = document.forms['contactForm']['name'].value;
+            var email = document.forms['contactForm']['email'].value;
+            var phone = document.forms['contactForm']['phone'].value;
+            var message = document.forms['contactForm']['message'].value;
+
+            var error = [];
+            if (name == '' || name.length < 3) {
+                error[0] = "Name must be atleast three characters";
+                document.getElementById('name-error').innerHTML = error[0];
+            } else {
+                document.getElementById('name-error').innerHTML = '';
+            }
+            if (email == '' || email.length < 10) {
+                error[1] = "invalid email address";
+                document.getElementById('email-error').innerHTML = error[1];
+            } else {
+                document.getElementById('email-error').innerHTML = '';
+            }
+            if (phone == '' || phone.length < 11) {
+                error[2] = "Invalid phone number";
+                document.getElementById('phone-error').innerHTML = error[2];
+            } else {
+                document.getElementById('phone-error').innerHTML = '';
+            }
+            if (message == '' || message.length < 20) {
+                error[3] = "Mesage must be atleast 20 characters";
+                document.getElementById('message-error').innerHTML = error[3];
+            } else {
+                document.getElementById('message-error').innerHTML = '';
+            }
+
+            if (error.length > 0) {
+                return false;
+            }
+        }
+
+        function myFocus(x) {
+            x.style.backgrounf = 'rgb(255, 255, 255);';
+        }
+
+
+    </script>
+
+
+
+</body>
