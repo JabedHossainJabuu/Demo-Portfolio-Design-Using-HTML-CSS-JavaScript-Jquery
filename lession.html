@@ -8,14 +8,43 @@
     <title>Document</title>
 
     <script rel="'script" src="jquery/jquery-3.6.4.js"></script>
+    <style>
+        body{
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+    </style>
 </head>
 
 <body>
+    <p>Click event and show hide actions</p>
     <button id="hide">Hide</button>
     <button id="show">Show</button>
     <button id="all">All</button> <br> <br>
-    <div style="padding: 50px 10px; width: 300px; background-color: aqua; text-align:center;">
+    <div id="hide-box" style="padding: 100px 50px; width: 300px; background-color: green; text-align:center;">
         Get your number
+    </div> 
+
+    <p>Double Click event and Fade in/out actions</p>
+    <button id="fd1">Fade out</button>
+    <button id="fd2">Fade in</button>
+    <button id="fdall">All</button> <br> <br>
+    <div id="fade-box" style="padding: 100px 50px; width: 300px; background-color: yellowgreen; text-align:center;">
+        Get your number
+    </div> 
+
+    <p>Click event and Slide up/down actions</p>
+    <button id="sd1">Slide up</button>
+    <button id="sd2">Slide down</button>
+    <button id="sdall">All</button> <br> <br>
+    <div id="slide-box" style="padding: 100px 50px; width: 300px; background-color: rgb(48, 138, 138); text-align:center;">
+        Get your number
+    </div> 
+ 
+    <p>Scroll event and animate actions</p>
+    <div id="scroll-box" style="padding: 100px 50px; width: 300px; background-color: orange; text-align:center;">
+        Scroll event and animate actions
+        <span id="scroll"></span>
     </div>
 
 
@@ -23,16 +52,57 @@
 
         $(document).ready(function () {
 
+            //Scroll event and animate actions
+            $(window).scroll(function () {
+                $('scroll-box').animate({height: '100px', width: '400px'});
+                var x = $(window).scrollTop();
+                $('#scroll').html(x);
+                if(x>20){
+                    $('#slide-box').hide();
+                }else{
+                    $('#slide-box').show();
+                }
+                if(x>100){
+                    $('#fade-box').hide();
+                }else{
+                    $('#fade-box').show();
+                }
+            });
+
+            // Double Click event and Fade in/out actions 
+            $('#fd1').dblclick(function () {
+                $('#fade-box').fadeOut(1000);
+            });
+            $('#fd2').dblclick(function () {
+                $('#fade-box').fadeIn(1000);
+            });
+            $('#fdall').dblclick(function () {
+                $('#fade-box').fadeToggle();
+            });
+
+            //Click event and Slide up/down actions
+            $('#sd1').click(function () {
+                $('#slide-box').slideUp(1000);
+            });
+            $('#sd2').click(function () {
+                $('#slide-box').slideDown(1000);
+            });
+            $('#sdall').click(function () {
+                $('#slide-box').slideToggle();
+            });
+
+            //Click event and show hide actions 
+
             $('#hide').click(function () {
-                $('div').hide();
+                $('#hide-box').hide(2000);
             });
 
             $('#show').click(function () {
-                $('div').show();
+                $('#hide-box').show(2000);
             });
-            
+
             $('#all').click(function () {
-                $('div').toggle();
+                $('#hide-box').toggle();
             });
 
         });
